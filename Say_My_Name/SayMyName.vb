@@ -14,10 +14,9 @@ Module SayMyName
         'then display the message
         Dim userMessage As String
 
-        Console.WriteLine("What is your name? Press type it and then press enter.")
+        Console.WriteLine("What is your name? Please type it and then press enter.")
         userMessage = Console.ReadLine()
         Console.WriteLine("Hello, " & userMessage & " , how are you doing today?")
-        'Console.WriteLine("You entered " & Chr(34) & userMessage & Chr(34) & " Good job!")
         Console.ReadLine()
 
     End Sub
