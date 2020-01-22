@@ -12,7 +12,7 @@ Module MoreOperators
 
         Console.WriteLine("Please Enter a message. Press enter when done.")
         userMessage = Console.ReadLine()
-        Console.WriteLine("You entered " & Char(34) userMessage & Char(34) " Good job!")
+        Console.WriteLine("You entered " & Chr(34) & userMessage & Chr(34) & " Good job!")
         Console.ReadLine()
 
     End Sub
