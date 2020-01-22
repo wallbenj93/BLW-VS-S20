@@ -5,7 +5,7 @@ Option Strict On
 'RCET0265
 'Spring 2020
 'Say My Name
-'https://github.com/wallbenj/BLW-VS-S20
+'https://github.com/wallbenj93/BLW-VS-S20
 
 Module SayMyName
 
