@@ -20,7 +20,15 @@ Module SimpleCalculator
         Console.WriteLine("Hello user! Welcome to the simple calculator!")
 Line1:
         Console.WriteLine("Please enter your first number.")
-        num1 = Console.ReadLine()
+Line4:
+        Try
+            num1 = Console.ReadLine()
+        Catch ex As Exception
+            Console.WriteLine("False. You entered an invalid character. Please try again")
+            'next line prints the description of the error to the user
+            Console.WriteLine(ex.Message.ToString)
+            GoTo Line4
+        End Try
         Console.WriteLine("Choose one of the following operations: ^, +, -, * or /")
 Line2:
         operationOption = Console.ReadLine()
@@ -32,8 +40,14 @@ Line2:
         End If
 Line3:
         Console.WriteLine("Enter your second number.")
-        num2 = Console.ReadLine()
-        answer = 0
+Line5:
+        Try
+            num2 = Console.ReadLine()
+        Catch ex As Exception
+            Console.WriteLine("False. You entered an invalid character. Please try again")
+            GoTo Line5
+            'end sub
+            answer = 0
         If operationOption = "^" Then
             answer = num1 ^ num2
         ElseIf operationOption = "+" Then
@@ -58,3 +72,9 @@ Line3:
     End Sub
 
 End Module
+
+'Try 
+'      some code like in line 39
+'Catch ex As Exception
+'      message to user
+'End Try
