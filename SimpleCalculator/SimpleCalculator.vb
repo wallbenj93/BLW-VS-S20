@@ -47,8 +47,9 @@ Line5:
             Console.WriteLine("False. You entered an invalid character. Please try again")
             GoTo Line5
             'end sub
-            answer = 0
-        If operationOption = "^" Then
+        End Try
+        answer = 0
+            If operationOption = "^" Then
             answer = num1 ^ num2
         ElseIf operationOption = "+" Then
             answer = num1 + num2
