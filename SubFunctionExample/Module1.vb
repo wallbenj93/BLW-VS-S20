@@ -20,7 +20,13 @@ Module Module1
         'Console.WriteLine(myNumber)
         'Console.writeline("in sub main")
         'doMath(7, 5, "Add")
-        ShowPattern(5)
+        Console.WriteLine("What is your name?")
+        Dim userName As String
+        userName = Console.ReadLine()
+        For i = 1 To 5 'Step 20
+            ShowPattern(20, userName)
+        Next
+        beep()
         Console.ReadLine()
     End Sub
 
@@ -58,16 +64,32 @@ Module Module1
         Console.WriteLine(result)
     End Sub
 
-    Sub ShowPattern(length As Integer)
-        Dim character As String
+    Sub ShowPattern(length As Integer, character As String)
+        'Dim character As String
         Dim pattern As String
-
-        character = "*"
-        For index = 1 To length
+        Console.WriteLine(Len(character))
+        'character = "*"
+        pattern = ""
+        For index = 1 To length Step 1
             pattern &= character
             Console.WriteLine(pattern)
         Next
 
+        For index = length - 1 To 1 Step -1
+            pattern = Left(pattern, index * Len(character))
+            Console.WriteLine(pattern)
+        Next
+
+    End Sub
+
+    Sub beep()
+        Console.Beep(392, 500) 'G4'
+        Console.Beep(440, 500) 'A4' frequency, ms (range
+        Console.Beep(349, 750) 'F4'
+        Console.Beep(196, 750) 'G3'
+        Console.Beep(262, 900) 'C4'
+        Console.BackgroundColor = ConsoleColor.Blue
+        Console.WriteLine("oh no you broke it")
     End Sub
 
 
