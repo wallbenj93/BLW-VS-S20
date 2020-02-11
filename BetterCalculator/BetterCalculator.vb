@@ -12,8 +12,10 @@ Module BetterCalculator
 
     Sub Main()
 
-        Dim num1 As String
-        Dim num2 As String
+        Dim num1 As Integer
+        Dim num2 As Integer
+        Dim userIn1 As String
+        Dim userIn2 As String
         Dim quitAnswer As Boolean
         Dim promptUser As Boolean
         Dim operationOption As String
@@ -30,17 +32,17 @@ Module BetterCalculator
             Console.WriteLine("Please enter two numbers. Enter ""Q"" at any time to quit.")
             Do While promptUser = True
                 Console.Write("Choose a number: ")
-                num1 = Console.ReadLine()
+                userIn1 = Console.ReadLine()
                 Try
-                    Convert.ToInt64(num1)
+                    num1 = Convert.ToInt64(userIn1)
                     Console.WriteLine("You entered """ & num1 & """")
                     promptUser = False
                 Catch ex As Exception
-                    If num1 = "q" Then
+                    If userIn1 = "q" Then
                         quitAnswer = True
                         promptUser = False
                     Else
-                        Console.WriteLine("You entered """ & num1 & """, please enter a whole number.")
+                        Console.WriteLine("You entered """ & userIn1 & """, please enter a whole number.")
                         promptUser = True
                     End If
                 End Try
@@ -48,21 +50,23 @@ Module BetterCalculator
             promptUser = True
             Do While promptUser = True And quitAnswer = False
                 Console.Write("Choose a number: ")
-                num2 = Console.ReadLine()
+                userIn2 = Console.ReadLine()
                 Try
-                    Convert.ToInt64(num2)
+                    num2 = Convert.ToInt64(userIn2)
                     Console.WriteLine("You entered """ & num2 & """")
                     promptUser = False
                 Catch ex As Exception
-                    If num2 = "q" Then
+                    If userIn2 = "q" Then
                         quitAnswer = True
                         promptUser = False
                     Else
-                        Console.WriteLine("You entered """ & num2 & """, please enter a whole number.")
+                        Console.WriteLine("You entered """ & userIn2 & """, please enter a whole number.")
                         promptUser = True
                     End If
                 End Try
             Loop
+            'num1 = Convert.ToInt64(num1)
+            'num2 = Convert.ToInt64(num2)
             promptUser = True
             operationOption = "q"
             Do While promptUser = True And quitAnswer = False
