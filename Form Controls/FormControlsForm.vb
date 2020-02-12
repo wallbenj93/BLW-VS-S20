@@ -21,11 +21,25 @@ Public Class FormControlsForm
             Label4.Text = NameTextBox.Text
         End If
 
+        If CheckBox2.Checked = True Then
+            MsgBox("Hello")
+        End If
+
+        If CheckBox3.Checked = True Then
+            PictureBox1.Image = My.Resources.kitten
+        Else
+            PictureBox1.Image = Nothing
+        End If
+
 
     End Sub
 
     Private Sub FormControlsForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         RadioButton1.Checked = True
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
     End Sub
 End Class

@@ -44,6 +44,9 @@ Partial Class FormControlsForm
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.RadioButton5 = New System.Windows.Forms.RadioButton()
         Me.RadioButton6 = New System.Windows.Forms.RadioButton()
+        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
         Me.UserInputGroupBox.SuspendLayout()
         Me.UsreSelection.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -51,19 +54,19 @@ Partial Class FormControlsForm
         '
         'GoButton
         '
-        Me.GoButton.Location = New System.Drawing.Point(140, 335)
+        Me.GoButton.Location = New System.Drawing.Point(222, 335)
         Me.GoButton.Name = "GoButton"
         Me.GoButton.Size = New System.Drawing.Size(145, 103)
-        Me.GoButton.TabIndex = 0
+        Me.GoButton.TabIndex = 9
         Me.GoButton.Text = "&Go"
         Me.GoButton.UseVisualStyleBackColor = True
         '
         'UpdateButton
         '
-        Me.UpdateButton.Location = New System.Drawing.Point(331, 335)
+        Me.UpdateButton.Location = New System.Drawing.Point(373, 335)
         Me.UpdateButton.Name = "UpdateButton"
         Me.UpdateButton.Size = New System.Drawing.Size(167, 103)
-        Me.UpdateButton.TabIndex = 1
+        Me.UpdateButton.TabIndex = 10
         Me.UpdateButton.Text = "&Update"
         Me.UpdateButton.UseVisualStyleBackColor = True
         '
@@ -73,7 +76,7 @@ Partial Class FormControlsForm
         Me.ExitButton.Location = New System.Drawing.Point(555, 335)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(202, 103)
-        Me.ExitButton.TabIndex = 2
+        Me.ExitButton.TabIndex = 11
         Me.ExitButton.Text = "E&xit"
         Me.ExitButton.UseVisualStyleBackColor = True
         '
@@ -162,7 +165,7 @@ Partial Class FormControlsForm
         Me.CheckBox3.Location = New System.Drawing.Point(75, 174)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(81, 17)
-        Me.CheckBox3.TabIndex = 14
+        Me.CheckBox3.TabIndex = 8
         Me.CheckBox3.Text = "CheckBox3"
         Me.CheckBox3.UseVisualStyleBackColor = True
         '
@@ -172,7 +175,7 @@ Partial Class FormControlsForm
         Me.CheckBox2.Location = New System.Drawing.Point(75, 151)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(81, 17)
-        Me.CheckBox2.TabIndex = 13
+        Me.CheckBox2.TabIndex = 7
         Me.CheckBox2.Text = "CheckBox2"
         Me.CheckBox2.UseVisualStyleBackColor = True
         '
@@ -182,7 +185,7 @@ Partial Class FormControlsForm
         Me.CheckBox1.Location = New System.Drawing.Point(75, 128)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(81, 17)
-        Me.CheckBox1.TabIndex = 12
+        Me.CheckBox1.TabIndex = 6
         Me.CheckBox1.Text = "CheckBox1"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
@@ -192,7 +195,7 @@ Partial Class FormControlsForm
         Me.RadioButton3.Location = New System.Drawing.Point(75, 92)
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New System.Drawing.Size(90, 17)
-        Me.RadioButton3.TabIndex = 9
+        Me.RadioButton3.TabIndex = 5
         Me.RadioButton3.TabStop = True
         Me.RadioButton3.Text = "RadioButton3"
         Me.RadioButton3.UseVisualStyleBackColor = True
@@ -203,7 +206,7 @@ Partial Class FormControlsForm
         Me.RadioButton2.Location = New System.Drawing.Point(75, 69)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(90, 17)
-        Me.RadioButton2.TabIndex = 8
+        Me.RadioButton2.TabIndex = 4
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "RadioButton2"
         Me.RadioButton2.UseVisualStyleBackColor = True
@@ -214,7 +217,7 @@ Partial Class FormControlsForm
         Me.RadioButton1.Location = New System.Drawing.Point(75, 46)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(90, 17)
-        Me.RadioButton1.TabIndex = 7
+        Me.RadioButton1.TabIndex = 3
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "RadioButton1"
         Me.RadioButton1.UseVisualStyleBackColor = True
@@ -224,6 +227,7 @@ Partial Class FormControlsForm
         Me.PictureBox1.Location = New System.Drawing.Point(580, 12)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(177, 189)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 5
         Me.PictureBox1.TabStop = False
         '
@@ -241,7 +245,6 @@ Partial Class FormControlsForm
         Me.RadioButton4.Name = "RadioButton4"
         Me.RadioButton4.Size = New System.Drawing.Size(90, 17)
         Me.RadioButton4.TabIndex = 10
-        Me.RadioButton4.TabStop = True
         Me.RadioButton4.Text = "RadioButton4"
         Me.RadioButton4.UseVisualStyleBackColor = True
         '
@@ -252,7 +255,6 @@ Partial Class FormControlsForm
         Me.RadioButton5.Name = "RadioButton5"
         Me.RadioButton5.Size = New System.Drawing.Size(90, 17)
         Me.RadioButton5.TabIndex = 11
-        Me.RadioButton5.TabStop = True
         Me.RadioButton5.Text = "RadioButton5"
         Me.RadioButton5.UseVisualStyleBackColor = True
         '
@@ -263,9 +265,41 @@ Partial Class FormControlsForm
         Me.RadioButton6.Name = "RadioButton6"
         Me.RadioButton6.Size = New System.Drawing.Size(90, 17)
         Me.RadioButton6.TabIndex = 10
-        Me.RadioButton6.TabStop = True
         Me.RadioButton6.Text = "RadioButton6"
         Me.RadioButton6.UseVisualStyleBackColor = True
+        '
+        'CheckBox4
+        '
+        Me.CheckBox4.AutoSize = True
+        Me.CheckBox4.Location = New System.Drawing.Point(117, 342)
+        Me.CheckBox4.Name = "CheckBox4"
+        Me.CheckBox4.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox4.TabIndex = 14
+        Me.CheckBox4.TabStop = False
+        Me.CheckBox4.Text = "CheckBox4"
+        Me.CheckBox4.UseVisualStyleBackColor = True
+        '
+        'CheckBox5
+        '
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.Location = New System.Drawing.Point(117, 319)
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox5.TabIndex = 13
+        Me.CheckBox5.TabStop = False
+        Me.CheckBox5.Text = "CheckBox5"
+        Me.CheckBox5.UseVisualStyleBackColor = True
+        '
+        'CheckBox6
+        '
+        Me.CheckBox6.AutoSize = True
+        Me.CheckBox6.Location = New System.Drawing.Point(117, 296)
+        Me.CheckBox6.Name = "CheckBox6"
+        Me.CheckBox6.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox6.TabIndex = 12
+        Me.CheckBox6.TabStop = False
+        Me.CheckBox6.Text = "CheckBox6"
+        Me.CheckBox6.UseVisualStyleBackColor = True
         '
         'FormControlsForm
         '
@@ -273,6 +307,9 @@ Partial Class FormControlsForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.ExitButton
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.CheckBox4)
+        Me.Controls.Add(Me.CheckBox5)
+        Me.Controls.Add(Me.CheckBox6)
         Me.Controls.Add(Me.RadioButton6)
         Me.Controls.Add(Me.RadioButton5)
         Me.Controls.Add(Me.RadioButton4)
@@ -317,4 +354,7 @@ Partial Class FormControlsForm
     Friend WithEvents RadioButton4 As RadioButton
     Friend WithEvents RadioButton5 As RadioButton
     Friend WithEvents RadioButton6 As RadioButton
+    Friend WithEvents CheckBox4 As CheckBox
+    Friend WithEvents CheckBox5 As CheckBox
+    Friend WithEvents CheckBox6 As CheckBox
 End Class
