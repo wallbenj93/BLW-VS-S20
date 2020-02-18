@@ -59,8 +59,6 @@
         '        userMessage &= "please enter text in textbox1" & vbNewLine
         '    Case Else
         'End Select
-
-
     End Sub
 
     Function IsStringEmpty(stringToTest As String) As Boolean
@@ -73,6 +71,23 @@
         Return status
     End Function
 
+    Function RunningTotal(currentValue As Integer) As Integer
+        Static total As Integer 'static continues to exist for lifetime of class/module
 
+        total += currentValue
 
+        Return total
+    End Function
+
+    Private Sub Total_Click(sender As Object, e As EventArgs) Handles Total.Click
+        Dim tempNumber As Integer
+        Const VALUE As Integer = 5
+        'Const VALUE = 5I      Same as previous line
+
+        For i = 1 To 10
+            tempNumber = RunningTotal(VALUE)
+        Next
+
+        Console.WriteLine(tempNumber)
+    End Sub
 End Class
