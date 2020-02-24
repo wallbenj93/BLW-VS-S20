@@ -31,14 +31,14 @@ Partial Class DinerMenuForm
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.DressingOptions = New System.Windows.Forms.Panel()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.SideOptions = New System.Windows.Forms.Panel()
+        Me.RadioButton7 = New System.Windows.Forms.RadioButton()
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.RadioButton5 = New System.Windows.Forms.RadioButton()
         Me.RadioButton6 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton7 = New System.Windows.Forms.RadioButton()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.DressingOptions.SuspendLayout()
         Me.SideOptions.SuspendLayout()
@@ -135,17 +135,17 @@ Partial Class DinerMenuForm
         Me.DressingOptions.TabIndex = 15
         Me.DressingOptions.Visible = False
         '
-        'RadioButton1
+        'RadioButton3
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton1.Location = New System.Drawing.Point(41, 14)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(180, 30)
-        Me.RadioButton1.TabIndex = 0
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Italian Dressing"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.RadioButton3.AutoSize = True
+        Me.RadioButton3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton3.Location = New System.Drawing.Point(41, 60)
+        Me.RadioButton3.Name = "RadioButton3"
+        Me.RadioButton3.Size = New System.Drawing.Size(180, 30)
+        Me.RadioButton3.TabIndex = 2
+        Me.RadioButton3.TabStop = True
+        Me.RadioButton3.Text = "Oil and Vinegar"
+        Me.RadioButton3.UseVisualStyleBackColor = True
         '
         'RadioButton2
         '
@@ -159,17 +159,17 @@ Partial Class DinerMenuForm
         Me.RadioButton2.Text = "LowFat Italian"
         Me.RadioButton2.UseVisualStyleBackColor = True
         '
-        'RadioButton3
+        'RadioButton1
         '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton3.Location = New System.Drawing.Point(41, 60)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(180, 30)
-        Me.RadioButton3.TabIndex = 2
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "Oil and Vinegar"
-        Me.RadioButton3.UseVisualStyleBackColor = True
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton1.Location = New System.Drawing.Point(41, 14)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(180, 30)
+        Me.RadioButton1.TabIndex = 0
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "Italian Dressing"
+        Me.RadioButton1.UseVisualStyleBackColor = True
         '
         'SideOptions
         '
@@ -180,8 +180,20 @@ Partial Class DinerMenuForm
         Me.SideOptions.Location = New System.Drawing.Point(663, 250)
         Me.SideOptions.Name = "SideOptions"
         Me.SideOptions.Size = New System.Drawing.Size(258, 119)
-        Me.SideOptions.TabIndex = 16
+        Me.SideOptions.TabIndex = 1
         Me.SideOptions.Visible = False
+        '
+        'RadioButton7
+        '
+        Me.RadioButton7.AutoSize = True
+        Me.RadioButton7.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton7.Location = New System.Drawing.Point(10, 86)
+        Me.RadioButton7.Name = "RadioButton7"
+        Me.RadioButton7.Size = New System.Drawing.Size(151, 30)
+        Me.RadioButton7.TabIndex = 6
+        Me.RadioButton7.TabStop = True
+        Me.RadioButton7.Text = "French Fries"
+        Me.RadioButton7.UseVisualStyleBackColor = True
         '
         'RadioButton4
         '
@@ -218,18 +230,6 @@ Partial Class DinerMenuForm
         Me.RadioButton6.TabStop = True
         Me.RadioButton6.Text = "Broccoli"
         Me.RadioButton6.UseVisualStyleBackColor = True
-        '
-        'RadioButton7
-        '
-        Me.RadioButton7.AutoSize = True
-        Me.RadioButton7.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton7.Location = New System.Drawing.Point(10, 86)
-        Me.RadioButton7.Name = "RadioButton7"
-        Me.RadioButton7.Size = New System.Drawing.Size(151, 30)
-        Me.RadioButton7.TabIndex = 6
-        Me.RadioButton7.TabStop = True
-        Me.RadioButton7.Text = "French Fries"
-        Me.RadioButton7.UseVisualStyleBackColor = True
         '
         'DinerMenuForm
         '
