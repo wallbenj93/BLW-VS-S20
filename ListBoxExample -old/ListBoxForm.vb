@@ -8,8 +8,8 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         DataListBox.Items.Add(FirstNameTextBox.Text & " " & LastNameTextBox.Text)
-        FirstNameTextBox.Text = ""
-        LastNameTextBox.Text = ""
+        'FirstNameTextBox.Text = ""
+        'LastNameTextBox.Text = ""
     End Sub
 
     Private Sub ClearButton_Click(sender As Object, e As EventArgs) Handles ClearButton.Click
@@ -21,7 +21,13 @@
     End Sub
 
     Private Sub DataListBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DataListBox.SelectedIndexChanged
+        Dim index As Integer
+
         Me.Text = DataListBox.SelectedIndex.ToString
-        'todo add selected first name and last time text box
+        index = InStr(DataListBox.SelectedItem.ToString, " ")
+        FirstNameTextBox.Text = Trim(Strings.Left(DataListBox.SelectedItem.ToString, index))
+        LastNameTextBox.Text = Trim(Strings.Mid(DataListBox.SelectedItem.ToString, index, Len(DataListBox.SelectedItem.ToString)))
     End Sub
+
+
 End Class
