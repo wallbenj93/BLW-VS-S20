@@ -3,7 +3,7 @@
         'DataListBox.Font()
         FirstNameTextBox.Text = "Elmer"
         LastNameTextBox.Text = "Fudd"
-
+        tester()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -29,5 +29,11 @@
         LastNameTextBox.Text = Trim(Strings.Mid(DataListBox.SelectedItem.ToString, index, Len(DataListBox.SelectedItem.ToString)))
     End Sub
 
+    Sub tester()
+        Dim someNumber As Double
+        someNumber = 10 * Math.Sin(Math.PI)
+        Console.WriteLine()
+
+    End Sub
 
 End Class
