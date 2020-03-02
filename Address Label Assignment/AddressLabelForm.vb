@@ -2,7 +2,7 @@
 'RCET0265
 'Spring 2020
 'Address label program
-'https://github.com/rosstimo/TJR-VS-F20
+'https://github.com/wallbenj93/BLW-VS-S20
 
 
 Public Class AddressLabelForm
