@@ -1,7 +1,7 @@
 ﻿Option Strict On
 Option Explicit On
 
-Module Module1
+Module SubFunctionExample
 
     Sub Main()
 
@@ -11,9 +11,13 @@ Module Module1
         'Console.WriteLine(myNumber)
         'Console.ReadLine()
 
-        'MySub(myNumber)
-        'Console.WriteLine("In sub main")
-        'Console.WriteLine(myNumber)
+
+        Dim someNumberInMain As Integer
+        someNumberInMain = 17
+        MySub(someNumberInMain)
+
+        Console.WriteLine("In sub main")
+        Console.WriteLine(myNumber)
 
         'myNumber = MyFunc(myNumber)
         'Console.WriteLine("In sub main")
@@ -26,16 +30,16 @@ Module Module1
         For i = 1 To 5 'Step 20
             ShowPattern(20, userName)
         Next
-        beep()
+        'beep()
         Console.ReadLine()
     End Sub
 
-    Sub MySub(myNumber As Integer)
+    Sub MySub(ByVal myNumberInMySub As Integer)
         'Dim myNumber As Integer
         'myNumber = myNumber + 2. same as next line
-        myNumber += 2
+        myNumberInMySub += 2
         Console.WriteLine("In sub MySub")
-        Console.WriteLine(myNumber)
+        Console.WriteLine(myNumberInMySub)
         Console.ReadLine()
     End Sub
 
