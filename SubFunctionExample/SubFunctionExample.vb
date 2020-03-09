@@ -5,41 +5,35 @@ Module SubFunctionExample
 
     Sub Main()
 
-        'Dim myNumber As Integer
+        Dim myNumber As Integer
         'myNumber = 7
-        'Console.WriteLine("In sub main")
+        'Console.WriteLine("In Sub Main")
         'Console.WriteLine(myNumber)
         'Console.ReadLine()
 
-
-        Dim someNumberInMain As Integer
-        someNumberInMain = 17
-        MySub(someNumberInMain)
-
-        Console.WriteLine("In sub main")
-        Console.WriteLine(myNumber)
+        MySub(myNumber)
+        'Console.WriteLine("In Sub Main")
+        'Console.WriteLine(myNumber)
 
         'myNumber = MyFunc(myNumber)
-        'Console.WriteLine("In sub main")
+        'Console.WriteLine("In Sub Main")
         'Console.WriteLine(myNumber)
-        'Console.writeline("in sub main")
-        'doMath(7, 5, "Add")
-        Console.WriteLine("What is your name?")
-        Dim userName As String
-        userName = Console.ReadLine()
-        For i = 1 To 5 'Step 20
-            ShowPattern(20, userName)
-        Next
-        'beep()
+
+        'doMath(7, 5, "Multiply")
+
+        'For i = 1 To 80 Step 20
+        'ShowPattern(40, "Tim")
+        'Next
+        'playSound()
         Console.ReadLine()
     End Sub
 
-    Sub MySub(ByVal myNumberInMySub As Integer)
+    Sub MySub(myNumber As Integer)
         'Dim myNumber As Integer
-        'myNumber = myNumber + 2. same as next line
-        myNumberInMySub += 2
-        Console.WriteLine("In sub MySub")
-        Console.WriteLine(myNumberInMySub)
+        'myNumber = myNumber + 2
+        myNumber += 2
+        Console.WriteLine("In Sub MySub")
+        Console.WriteLine(myNumber)
         Console.ReadLine()
     End Sub
 
@@ -86,17 +80,15 @@ Module SubFunctionExample
 
     End Sub
 
-    Sub beep()
+    Sub PlaySound()
         Console.Beep(392, 500) 'G4'
-        Console.Beep(440, 500) 'A4' frequency, ms (range
+        Console.Beep(440, 500) 'A4'
         Console.Beep(349, 750) 'F4'
         Console.Beep(196, 750) 'G3'
         Console.Beep(262, 900) 'C4'
         Console.BackgroundColor = ConsoleColor.Blue
-        Console.WriteLine("oh no you broke it")
+        Console.WriteLine("Oh no, you broke it!")
     End Sub
-
-
 
 End Module
 

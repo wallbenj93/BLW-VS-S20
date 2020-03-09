@@ -22,6 +22,7 @@ Partial Class MathContest
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.StudentInfoGroupBox = New System.Windows.Forms.GroupBox()
         Me.GradeLabel = New System.Windows.Forms.Label()
         Me.AgeLabel = New System.Windows.Forms.Label()
@@ -42,10 +43,12 @@ Partial Class MathContest
         Me.SubtractButton = New System.Windows.Forms.RadioButton()
         Me.AddButton = New System.Windows.Forms.RadioButton()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.ValidateButton = New System.Windows.Forms.Button()
+        Me.ExitButton = New System.Windows.Forms.Button()
+        Me.SummaryButton = New System.Windows.Forms.Button()
         Me.ClearButton = New System.Windows.Forms.Button()
         Me.SubmitButton = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.StudentInfoGroupBox.SuspendLayout()
         Me.MathProblemGroupBox.SuspendLayout()
         Me.ProblemTypeGroupBox.SuspendLayout()
@@ -100,7 +103,7 @@ Partial Class MathContest
         Me.GradeTextBox.Name = "GradeTextBox"
         Me.GradeTextBox.Size = New System.Drawing.Size(21, 20)
         Me.GradeTextBox.TabIndex = 2
-        Me.GradeTextBox.Text = "_"
+        Me.ToolTip1.SetToolTip(Me.GradeTextBox, "Enter the students grade here")
         '
         'AgeTextBox
         '
@@ -108,7 +111,7 @@ Partial Class MathContest
         Me.AgeTextBox.Name = "AgeTextBox"
         Me.AgeTextBox.Size = New System.Drawing.Size(23, 20)
         Me.AgeTextBox.TabIndex = 1
-        Me.AgeTextBox.Text = "__"
+        Me.ToolTip1.SetToolTip(Me.AgeTextBox, "Enter the students age here")
         '
         'NameTextBox
         '
@@ -116,6 +119,7 @@ Partial Class MathContest
         Me.NameTextBox.Name = "NameTextBox"
         Me.NameTextBox.Size = New System.Drawing.Size(147, 20)
         Me.NameTextBox.TabIndex = 0
+        Me.ToolTip1.SetToolTip(Me.NameTextBox, "Enter the students name here")
         '
         'MathProblemGroupBox
         '
@@ -127,7 +131,7 @@ Partial Class MathContest
         Me.MathProblemGroupBox.Controls.Add(Me.FirstNumTextBox)
         Me.MathProblemGroupBox.Location = New System.Drawing.Point(25, 96)
         Me.MathProblemGroupBox.Name = "MathProblemGroupBox"
-        Me.MathProblemGroupBox.Size = New System.Drawing.Size(165, 174)
+        Me.MathProblemGroupBox.Size = New System.Drawing.Size(165, 184)
         Me.MathProblemGroupBox.TabIndex = 1
         Me.MathProblemGroupBox.TabStop = False
         Me.MathProblemGroupBox.Text = "Current Math Problem"
@@ -147,6 +151,7 @@ Partial Class MathContest
         Me.StudentAnswerTextBox.Name = "StudentAnswerTextBox"
         Me.StudentAnswerTextBox.Size = New System.Drawing.Size(147, 20)
         Me.StudentAnswerTextBox.TabIndex = 7
+        Me.ToolTip1.SetToolTip(Me.StudentAnswerTextBox, "enter the students answer here")
         '
         'SecondNumLabel
         '
@@ -163,6 +168,7 @@ Partial Class MathContest
         Me.SecondNumTextBox.Name = "SecondNumTextBox"
         Me.SecondNumTextBox.Size = New System.Drawing.Size(147, 20)
         Me.SecondNumTextBox.TabIndex = 5
+        Me.ToolTip1.SetToolTip(Me.SecondNumTextBox, "Enter a second number here")
         '
         'FirstNumLabel
         '
@@ -179,6 +185,7 @@ Partial Class MathContest
         Me.FirstNumTextBox.Name = "FirstNumTextBox"
         Me.FirstNumTextBox.Size = New System.Drawing.Size(147, 20)
         Me.FirstNumTextBox.TabIndex = 1
+        Me.ToolTip1.SetToolTip(Me.FirstNumTextBox, "Enter a number here")
         '
         'ProblemTypeGroupBox
         '
@@ -188,7 +195,7 @@ Partial Class MathContest
         Me.ProblemTypeGroupBox.Controls.Add(Me.AddButton)
         Me.ProblemTypeGroupBox.Location = New System.Drawing.Point(196, 96)
         Me.ProblemTypeGroupBox.Name = "ProblemTypeGroupBox"
-        Me.ProblemTypeGroupBox.Size = New System.Drawing.Size(125, 174)
+        Me.ProblemTypeGroupBox.Size = New System.Drawing.Size(125, 184)
         Me.ProblemTypeGroupBox.TabIndex = 2
         Me.ProblemTypeGroupBox.TabStop = False
         Me.ProblemTypeGroupBox.Text = "Math Problem Type"
@@ -202,6 +209,7 @@ Partial Class MathContest
         Me.DivideButton.TabIndex = 3
         Me.DivideButton.TabStop = True
         Me.DivideButton.Text = "Divide"
+        Me.ToolTip1.SetToolTip(Me.DivideButton, "Click here to choose division")
         Me.DivideButton.UseVisualStyleBackColor = True
         '
         'MultiplyButton
@@ -213,6 +221,7 @@ Partial Class MathContest
         Me.MultiplyButton.TabIndex = 2
         Me.MultiplyButton.TabStop = True
         Me.MultiplyButton.Text = "Multiply"
+        Me.ToolTip1.SetToolTip(Me.MultiplyButton, "Click here to choose multiplication")
         Me.MultiplyButton.UseVisualStyleBackColor = True
         '
         'SubtractButton
@@ -224,6 +233,7 @@ Partial Class MathContest
         Me.SubtractButton.TabIndex = 1
         Me.SubtractButton.TabStop = True
         Me.SubtractButton.Text = "Subtract"
+        Me.ToolTip1.SetToolTip(Me.SubtractButton, "Click here to choose subtraction")
         Me.SubtractButton.UseVisualStyleBackColor = True
         '
         'AddButton
@@ -236,66 +246,89 @@ Partial Class MathContest
         Me.AddButton.TabIndex = 0
         Me.AddButton.TabStop = True
         Me.AddButton.Text = "Add"
+        Me.ToolTip1.SetToolTip(Me.AddButton, "Click here to choose addition")
         Me.AddButton.UseVisualStyleBackColor = True
         '
         'GroupBox4
         '
-        Me.GroupBox4.Controls.Add(Me.Button4)
-        Me.GroupBox4.Controls.Add(Me.Button3)
+        Me.GroupBox4.Controls.Add(Me.ValidateButton)
+        Me.GroupBox4.Controls.Add(Me.ExitButton)
+        Me.GroupBox4.Controls.Add(Me.SummaryButton)
         Me.GroupBox4.Controls.Add(Me.ClearButton)
         Me.GroupBox4.Controls.Add(Me.SubmitButton)
         Me.GroupBox4.Location = New System.Drawing.Point(355, 21)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(157, 249)
+        Me.GroupBox4.Size = New System.Drawing.Size(157, 259)
         Me.GroupBox4.TabIndex = 3
         Me.GroupBox4.TabStop = False
         '
+        'ValidateButton
+        '
+        Me.ValidateButton.Location = New System.Drawing.Point(6, 10)
+        Me.ValidateButton.Name = "ValidateButton"
+        Me.ValidateButton.Size = New System.Drawing.Size(134, 47)
+        Me.ValidateButton.TabIndex = 4
+        Me.ValidateButton.Text = "E&nter Contest"
+        Me.ToolTip1.SetToolTip(Me.ValidateButton, "Click here to begin the contest")
+        Me.ValidateButton.UseVisualStyleBackColor = True
+        '
+        'ExitButton
+        '
+        Me.ExitButton.Location = New System.Drawing.Point(6, 208)
+        Me.ExitButton.Name = "ExitButton"
+        Me.ExitButton.Size = New System.Drawing.Size(134, 47)
+        Me.ExitButton.TabIndex = 3
+        Me.ExitButton.Text = "&Exit"
+        Me.ToolTip1.SetToolTip(Me.ExitButton, "Click here to exit the program")
+        Me.ExitButton.UseVisualStyleBackColor = True
+        '
+        'SummaryButton
+        '
+        Me.SummaryButton.Location = New System.Drawing.Point(6, 158)
+        Me.SummaryButton.Name = "SummaryButton"
+        Me.SummaryButton.Size = New System.Drawing.Size(134, 47)
+        Me.SummaryButton.TabIndex = 2
+        Me.SummaryButton.Text = "Summar&y"
+        Me.ToolTip1.SetToolTip(Me.SummaryButton, "Click here to see a summary of results so far")
+        Me.SummaryButton.UseVisualStyleBackColor = True
+        '
         'ClearButton
         '
-        Me.ClearButton.Location = New System.Drawing.Point(6, 60)
+        Me.ClearButton.Location = New System.Drawing.Point(6, 108)
         Me.ClearButton.Name = "ClearButton"
         Me.ClearButton.Size = New System.Drawing.Size(134, 47)
         Me.ClearButton.TabIndex = 1
         Me.ClearButton.Text = "&Clear"
+        Me.ToolTip1.SetToolTip(Me.ClearButton, "Click here to clear all data")
         Me.ClearButton.UseVisualStyleBackColor = True
         '
         'SubmitButton
         '
-        Me.SubmitButton.Location = New System.Drawing.Point(6, 10)
+        Me.SubmitButton.Location = New System.Drawing.Point(6, 58)
         Me.SubmitButton.Name = "SubmitButton"
         Me.SubmitButton.Size = New System.Drawing.Size(134, 47)
         Me.SubmitButton.TabIndex = 0
         Me.SubmitButton.Text = "&Submit"
+        Me.ToolTip1.SetToolTip(Me.SubmitButton, "Click here to submit the students answer")
         Me.SubmitButton.UseVisualStyleBackColor = True
         '
-        'Button3
+        'ToolTip1
         '
-        Me.Button3.Location = New System.Drawing.Point(6, 110)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(134, 47)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Summar&y"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(6, 160)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(134, 47)
-        Me.Button4.TabIndex = 3
-        Me.Button4.Text = "&Exit"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.ToolTip1.AutoPopDelay = 5000
+        Me.ToolTip1.InitialDelay = 200
+        Me.ToolTip1.ReshowDelay = 100
         '
         'MathContest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(536, 290)
+        Me.ClientSize = New System.Drawing.Size(536, 314)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.ProblemTypeGroupBox)
         Me.Controls.Add(Me.MathProblemGroupBox)
         Me.Controls.Add(Me.StudentInfoGroupBox)
         Me.Name = "MathContest"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Math Contest"
         Me.StudentInfoGroupBox.ResumeLayout(False)
         Me.StudentInfoGroupBox.PerformLayout()
@@ -330,6 +363,8 @@ Partial Class MathContest
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents ClearButton As Button
     Friend WithEvents SubmitButton As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents ExitButton As Button
+    Friend WithEvents SummaryButton As Button
+    Friend WithEvents ValidateButton As Button
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

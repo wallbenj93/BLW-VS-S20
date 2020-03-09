@@ -47,6 +47,8 @@ Partial Class FormControlsForm
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
         Me.CheckBox5 = New System.Windows.Forms.CheckBox()
         Me.CheckBox6 = New System.Windows.Forms.CheckBox()
+        Me.AgeTextBox = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.UserInputGroupBox.SuspendLayout()
         Me.UsreSelection.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -82,6 +84,8 @@ Partial Class FormControlsForm
         '
         'UserInputGroupBox
         '
+        Me.UserInputGroupBox.Controls.Add(Me.Label5)
+        Me.UserInputGroupBox.Controls.Add(Me.AgeTextBox)
         Me.UserInputGroupBox.Controls.Add(Me.Label3)
         Me.UserInputGroupBox.Controls.Add(Me.Label2)
         Me.UserInputGroupBox.Controls.Add(Me.Label1)
@@ -301,6 +305,22 @@ Partial Class FormControlsForm
         Me.CheckBox6.Text = "CheckBox6"
         Me.CheckBox6.UseVisualStyleBackColor = True
         '
+        'AgeTextBox
+        '
+        Me.AgeTextBox.Location = New System.Drawing.Point(51, 151)
+        Me.AgeTextBox.Name = "AgeTextBox"
+        Me.AgeTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.AgeTextBox.TabIndex = 9
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(6, 155)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(26, 13)
+        Me.Label5.TabIndex = 9
+        Me.Label5.Text = "Age"
+        '
         'FormControlsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -357,4 +377,6 @@ Partial Class FormControlsForm
     Friend WithEvents CheckBox4 As CheckBox
     Friend WithEvents CheckBox5 As CheckBox
     Friend WithEvents CheckBox6 As CheckBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents AgeTextBox As TextBox
 End Class

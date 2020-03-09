@@ -6,18 +6,22 @@
         tester()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub addButton_Click(sender As Object, e As EventArgs) Handles addButton.Click, AddItemToolStripMenuItem.Click
         DataListBox.Items.Add(FirstNameTextBox.Text & " " & LastNameTextBox.Text)
         'FirstNameTextBox.Text = ""
         'LastNameTextBox.Text = ""
     End Sub
 
-    Private Sub ClearButton_Click(sender As Object, e As EventArgs) Handles ClearButton.Click
+    Private Sub ClearButton_Click(sender As Object, e As EventArgs) Handles ClearButton.Click, ClearAllToolStripMenuItem.Click
         DataListBox.Items.Clear()
     End Sub
 
-    Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
-        Me.Close()
+    Private Sub ExitProgram(sender As Object, e As EventArgs) Handles ExitButton.Click, ExitToolStripMenuItem.Click
+        Dim result As MsgBoxStyle
+       result = MsgBox("Are you sure you want to close? All data will be lost!!!", vbOKCancel)
+        If result = vbOK Then
+            Me.Close()
+        End If
     End Sub
 
     Private Sub DataListBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DataListBox.SelectedIndexChanged
@@ -36,4 +40,11 @@
 
     End Sub
 
+    Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+        MsgBox("List Box Program Beta version 1.0.001" & vbNewLine _
+               & "Ben Wallace" & vbNewLine _
+               & "Spring 2020" & vbNewLine _
+               & "RCET0265" & vbNewLine _
+               & " In association with Elmer Fudd LLC.")
+    End Sub
 End Class
