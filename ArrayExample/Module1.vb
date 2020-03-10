@@ -5,7 +5,7 @@
 
         'ReDim Preserve myArray (4) <- make array bigger or smaller with redim
 
-        myArray(1, 1) = 5
+        'myArray(1, 1) = 5
 
         myArray = {1, 2, 3, 4}
 

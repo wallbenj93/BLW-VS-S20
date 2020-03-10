@@ -29,7 +29,7 @@ Module Module1
     Sub TimesTable()
         Dim result As Integer
         For i = 1 To 12
-            For j = 1 To 12
+            For j = 1 To 11
                 result = i * j
                 Console.Write(result.ToString("C").PadLeft(8) & "|")
             Next
