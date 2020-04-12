@@ -208,7 +208,7 @@ Public Class MathContest
 
         If StudentAnswerTextBox.Text <> "" Then
             Try
-                studAnswer = CInt(StudentAnswerTextBox.Text)
+                'studAnswer = CInt(StudentAnswerTextBox.Text)
                 studAnsGood = True
             Catch ex As Exception
                 MsgBox("Please enter a valid answer")
@@ -229,4 +229,10 @@ Public Class MathContest
             'invalid value, the submit button would disable again
         End If
     End Sub
+
+    'Private Sub SubmitButton_Validated(sender As Object, e As EventArgs) Handles AgeTextBox.
+    '    MsgBox("error")
+    'End Sub
+
+    '
 End Class

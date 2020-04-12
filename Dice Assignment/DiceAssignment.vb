@@ -1,4 +1,8 @@
-﻿Module DiceAssignment
+﻿'Ben Wallace
+'RCET0265
+'Spring 2020
+'Dice Roll
+Module DiceAssignment
     Sub Main()
         Dim sum As Integer
         Dim MyArray(12, 3) As Decimal
@@ -21,18 +25,28 @@
         Next
 
         'display array
-        Console.WriteLine("      Total Dice    Times Rolled        % Chance")
-        For i = 2 To 12
-            For j = 1 To 3
+        'Console.WriteLine("      Total Dice    Times Rolled        % Chance")
+        Console.WriteLine("Roll of the dice".PadLeft(70))
+        For i = 1 To 3
+            If i = 1 Then
+                Console.Write("Total of Roll: ")
+            End If
+            If i = 2 Then
+                Console.Write("Times Rolled:  ")
+            End If
+            If i = 3 Then
+                Console.Write(" % of rolls:   ")
+            End If
+            For j = 2 To 12
                 'Console.WriteLine(MyArray(i, j))
-                Console.Write(MyArray(i, j).ToString().PadLeft(15) & "|")
+                Console.Write(MyArray(j, i).ToString().PadLeft(7) & "|")
             Next
             Console.WriteLine()
         Next
-        For i = 2 To 12
-            totalPercent += MyArray(i, 3)
-        Next
-        Console.WriteLine(totalPercent.ToString().PadLeft(47) & "|")
+        'For i = 2 To 12
+        '    totalPercent += MyArray(i, 3)
+        'Next
+        'Console.WriteLine(totalPercent.ToString().PadLeft(47) & "|")
         Console.ReadLine()
     End Sub
 End Module
