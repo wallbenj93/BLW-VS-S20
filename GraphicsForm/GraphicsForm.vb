@@ -42,10 +42,10 @@
         Static oldX As Integer
         Static oldY As Integer
 
-        'If penColor.IsEmpty = True Then
-        '    'MsgBox("yay I figured it out")
-        '    penColor = Color.Black 'or by default make a pop to choose color at startup?
-        'End If
+        If penColor.IsEmpty = True Then
+            'MsgBox("yay I figured it out")
+            penColor = Color.Black 'or by default make a pop to choose color at startup?
+        End If
 
         If e.Button.ToString = "Left" Then
             'draw the line
@@ -74,5 +74,25 @@
         '    penColor = ColorDialog1.Color
         '    myPen.Color = penColor
         'End If
+    End Sub
+
+    Sub DrawEllipse()
+        Dim graph As Graphics = Me.CreateGraphics
+        Dim myPen As New Pen(Color.FromArgb(255, 0, 0, 0))
+
+        graph.DrawEllipse(myPen, New Rectangle(50, 50, 100, 100))
+
+        myPen.Dispose()
+        graph.Dispose()
+    End Sub
+
+    Sub drawRectangle()
+        Dim graph As Graphics = Me.CreateGraphics
+        Dim myPen As New Pen(Color.FromArgb(255, 0, 0, 0))
+
+        graph.DrawRectangle(myPen, New Rectangle(50, 50, 100, 100))
+
+        myPen.Dispose()
+        graph.Dispose()
     End Sub
 End Class

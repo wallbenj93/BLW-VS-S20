@@ -32,8 +32,7 @@ Partial Class Form1
         '
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 14
-        Me.ListBox1.Items.AddRange(New Object() {"hello"})
-        Me.ListBox1.Location = New System.Drawing.Point(34, 66)
+        Me.ListBox1.Location = New System.Drawing.Point(26, 72)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(861, 284)
         Me.ListBox1.TabIndex = 0

@@ -1,4 +1,10 @@
-﻿Public Class Form1
+﻿'Ben Wallace
+'RCET0265
+'Spring 2020
+'Dice w list box
+'https://github.com/wallbenj93/BLW-VS-S20
+
+Public Class Form1
     Private Sub rerollButton_Click(sender As Object, e As EventArgs) Handles rerollButton.Click
         Dim MyArray(10, 1) As Decimal
         Dim sum As Integer
